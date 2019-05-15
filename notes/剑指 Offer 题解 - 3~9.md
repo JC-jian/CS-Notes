@@ -59,6 +59,38 @@ private void swap(int[] nums, int i, int j) {
 }
 ```
 
+————————————————————————————————————————————————————————————————————————————
+package demo;
+
+import java.util.HashMap;
+import java.util.HashSet;
+
+public class find {
+	public static void main(String[] args) {
+		int nums[] = { 2, 3, 1, 0, 2, 5, 3, 2, 5, 4 ,2 ,2 ,5};
+		HashSet<Integer> hashSet = new HashSet<Integer>();
+		HashMap<Integer, Integer> map = new HashMap<Integer, Integer>();
+
+		for (int i = 0; i < nums.length; i++) {
+			if (hashSet.add(nums[i])) {
+
+			} else {
+				if (map.get(nums[i]) == null) {
+					map.put(nums[i], 1);
+				} else {
+					map.put(nums[i], map.get(nums[i]) + 1);
+				}
+			}
+
+		}
+		System.out.println(map);
+	}
+
+}
+
+
+
+
 # 4. 二维数组中的查找
 
 [NowCoder](https://www.nowcoder.com/practice/abc3fe2ce8e146608e868a70efebf62e?tpId=13&tqId=11154&tPage=1&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking)
